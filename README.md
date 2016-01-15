@@ -64,6 +64,8 @@ print sniff(prn=arp_display, filter="arp", store=0, count=10)
              --secret=Client_Secret (string)
              --long=Longitude Position (decimal)
              --lat=Latitude Position (decimal)
+             
+             The Latitude and Longitude coordinates should be your home, or where ever you plan on placing this bad boy.
 ```
 
 ![](http://i.imgur.com/nLl2ftj.png)
