@@ -17,7 +17,7 @@ ___
 ![](http://i.imgur.com/qsnLNB1.jpg)
 ![](http://i.imgur.com/V3WZ72E.jpg)
 ___
-
+> Note: Browsing to your routers homepage will give you the MAC Address faster.
 ### Setting Up Your Dash Button ###
 
 ![](http://i.imgur.com/ubeiy9U.png)
