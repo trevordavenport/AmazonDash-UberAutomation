@@ -57,3 +57,13 @@ def arp_display(pkt):
 print sniff(prn=arp_display, filter="arp", store=0, count=10)
 ```
 ![](http://i.imgur.com/GWqLqih.png)
+
+### Using the Script ###
+```
+  Arguments: --id=Client_ID (string)
+             --secret=Client_Secret (string)
+             --long=Longitude Position (decimal)
+             --lat=Latitude Position (decimal)
+```
+
+![](http://i.imgur.com/nLl2ftj.png)
