@@ -1,4 +1,4 @@
-# Amazon Dash Button + One Button Uber Automation
+# Amazon Dash + One Button Uber Automation
 
 ===========================
 > Hack the Amazon Dash Button to Call an Uber while you pregame... or whatever other people do before an Uber.
@@ -14,9 +14,8 @@ Author: Trevor Davenport
 ___
 
 #### Overview ####
-```
-  
-```
+![](http://i.imgur.com/qsnLNB1.jpg)
+![](http://i.imgur.com/V3WZ72E.jpg)
 ___
 
 #### Usage ####
