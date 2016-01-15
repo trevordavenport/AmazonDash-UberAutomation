@@ -18,22 +18,24 @@ ___
 ![](http://i.imgur.com/V3WZ72E.jpg)
 ___
 
-#### Setting Up Your Dash Button ####
+### Setting Up Your Dash Button ###
 
 ![](http://i.imgur.com/ubeiy9U.png)
+
+#### Sniffing ARP Probes ####
 ```
-  1. We will need to run a script to sniff the ARP Probes sent by the Dash Button (dash_sniff.py)
-  
+  1. Run dash_sniff.py, Push Dash Button, Wait for print response
+  2. Note and Save MAC Address of Dash Button.
+  3. We will hardcode this MAC Address into our main program.
 ```
 ```python
-from scapy.all import *
-
-def arp_display(pkt):
-  if pkt[ARP].op == 1: #who-has (request)
-    if pkt[ARP].psrc == '0.0.0.0': # ARP Probe
-      print "ARP Probe from: " + pkt[ARP].hwsrc
-
-print sniff(prn=arp_display, filter="arp", store=0, count=10)
+  #Sniff Dash ARP Probes (dash_sniff.py)
+  from scapy.all import *
+  def arp_display(pkt):
+    if pkt[ARP].op == 1: #who-has (request)
+      if pkt[ARP].psrc == '0.0.0.0': # ARP Probe
+        print "ARP Probe from: " + pkt[ARP].hwsrc
+  print sniff(prn=arp_display, filter="arp", store=0, count=10)
 ```
 
 ___
