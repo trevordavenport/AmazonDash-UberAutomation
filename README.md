@@ -18,9 +18,23 @@ ___
 ![](http://i.imgur.com/V3WZ72E.jpg)
 ___
 
-#### Usage ####
+#### Setting Up Your Dash Button ####
 
-![](http://i.imgur.com/cFcey2H.png)
+![](http://i.imgur.com/ubeiy9U.png)
+```
+  1. We will need to run a script to sniff the ARP Probes sent by the Dash Button (dash_sniff.py)
+  
+```
+```python
+from scapy.all import *
+
+def arp_display(pkt):
+  if pkt[ARP].op == 1: #who-has (request)
+    if pkt[ARP].psrc == '0.0.0.0': # ARP Probe
+      print "ARP Probe from: " + pkt[ARP].hwsrc
+
+print sniff(prn=arp_display, filter="arp", store=0, count=10)
+```
 
 ___
 
